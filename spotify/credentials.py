@@ -1,3 +1,6 @@
-CLIENT_ID = "eb5be1b1987d47278224ae27816cdbb8"
-CLIENT_SECRET = "a60e6222cae9494d8ae7fd65a6c0645e"
-REDIRECT_URI = "http://127.0.0.1:8000/spotify/redirect"
+from decouple import config
+
+CLIENT_ID = config('CLIENT_ID')
+CLIENT_SECRET = config('CLIENT_SECRET')
+REDIRECT_URI = config('REDIRECT_URI')
+

@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from spotify.credentials import CLIENT_ID, CLIENT_SECRET, REDIRECT_URI
+from decouple import config
 from pathlib import Path
 import os
 
@@ -21,10 +21,12 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7*or92#plmelb0f9dxghsu0met+i#$yu00k3+gr^96!mdl*m-j'
+
+SECRET_KEY = config('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG
+DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 # Application definition
