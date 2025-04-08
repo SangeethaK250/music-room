@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from spotify.credentials import CLIENT_ID, CLIENT_SECRET, REDIRECT_URI
 from pathlib import Path
-import os.pathkkk
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
