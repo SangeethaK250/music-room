@@ -11,3 +11,4 @@ urlpatterns = [
     path('skip', SkipSong.as_view()),
    
 ]
+
